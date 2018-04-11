@@ -46,7 +46,8 @@ def excute(sql, args):
         return affected
 
 
-
+#metaclass 元类：就是类的生成模板
+#attrs 就是将一个类的属性整合成一个字典的样子有点像oc的kvc
 class ModelMetaclass(type):
     def __new__(cls, name, bases, attrs):
         if name=="Model":
