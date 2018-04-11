@@ -105,3 +105,13 @@ class Model(dict, metaclass=ModelMetaclass):
             return cls(**rs[0])
 
 
+    @asyncio.coroutine
+    def remove(self):
+        args = [self.get(self.__primary_key__)]
+        rows = excute(self.__delete__, args)
+
+
+
+
+
+
